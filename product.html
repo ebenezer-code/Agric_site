@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agric site</title>
+    <link rel="stylesheet" href="sab.css">
+</head>
+<body>
+    
+    <header class="head">
+        <nav class="nav main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">our Agents</a></li>
+                <li><a href="product.html" class="active-nav-link">Products</a></li>
+                <li><a onclick="myFunction()">login</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+       
+        <h1 class="nav-name"><span class="head2">OUR </span><span class="head2">PRODUCTS</span></h1>
+       <div class="content-wrapper">
+           <div class="items-wrapper" id="wrapper-gallery">
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/xe1.jpg);"></div>
+                     <div class="img-wrapper">
+                        
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/xe2.jpg);"></div>
+                     <div class="img-wrapper">
+                        
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/xe3.jpg);"></div>
+                     <div class="img-wrapper">
+                        
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/xe4.jpg);"></div>
+                     <div class="img-wrapper">
+                        
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/xe5.jpg);"></div>
+                     <div class="img-wrapper">
+
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/xe6.jpg);"></div>
+                     <div class="img-wrapper">
+                        
+                     </div>
+               </div>   
+                     </div>
+               </div>
+               
+           </div>
+       </div>
+    </main>
+    <script>
+        function myFunction() {
+           alertFunc();
+           location.href = "login.html"
+    
+    }
+                function alertFunc() {
+                
+                alert("Login Now");
+                };
+                
+                const portfolioItems = document.querySelectorAll(".item-wrapper");
+                portfolioItems.forEach((itemWrapper) => {
+                itemWrapper.addEventListener("mouseover", () => {
+                itemWrapper.childNodes[1].classList.add("img-darken");
+                });
+                
+                itemWrapper.addEventListener('mouseout', () => {
+                    itemWrapper.childNodes[1].classList.remove('img-darken');
+                });
+                });
+    </script>
+</body>
+</html>

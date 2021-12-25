@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agric site</title>
+    <link rel="stylesheet" href="sab.css">
+</head>
+<body>
+    <header class="head">
+        <nav class="nav main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active-nav-link">our Agents</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a onclick="myFunction()">Login</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+       
+        <h1 class="nav-name"><span class="head2">OUR </span><span class="head2">AGENTS</span></h1>
+       <div class="content-wrapper">
+           <div class="items-wrapper" id="wrapper-gallery">
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/farm1.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                            <h3>Mr Tompins <p>Wheat Farmer</p></h3>
+                         </div>
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/farm2.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                             <h3>Mr Andrew <p>Life-stock farmer</p></h3>
+                         </div>
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/farm3.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                             <h3>Mr Samuel <p>Plough Carrier</p>
+                             </h3>
+                         </div>
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/farm4.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                            <h3>Expertrate</h>
+                         </div>
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/farm5.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                             <h3>Fisherman
+
+                             </h3>
+                         </div>
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/farm7.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                             <h3>Mr and Mrs Harts <p>Co-Owners</p></h3>
+                         </div>
+                     </div>
+               </div>
+           </div>
+       </div>
+        
+    </main>
+    <footer>
+        <h1 class="nav-name"><span class="head2">CONTACT </span><span class="head2">US</span></h1>
+         <div class="content-wrapper">
+          <div class="profile-content-wrapper">
+              <div class="placeholder">
+                  <ul>
+                      <br>
+                         <li>Email:ebenezernoblest@gmail.com</li>
+                      </br>
+                      <br>
+                        <li>mobile number:+2349071183097</li>
+                     </br>
+                     <br>   
+                      <li>Whatsapp:+2348121772175</li>
+                     </br>  
+                     <br>
+                      <li>FaceBook:m.me/ebenezer.noble.16</li>
+                     </br>   
+                     <br>
+                      <li>LinkedIn:https://www.linkedin.com/in/ebenezer-noble-3b60111a5</li>
+                     </br>
+                  </ul>
+              </div>
+              
+           </div>
+         </div>
+      </div>
+    </footer>
+       <script>
+        function myFunction() {
+           alertFunc();
+           location.href = "login.html"
+    
+    }
+                function alertFunc() {
+                alert("Login Now");
+                };
+                
+                const portfolioItems = document.querySelectorAll(".item-wrapper");
+                portfolioItems.forEach((itemWrapper) => {
+                itemWrapper.addEventListener("mouseover", () => {
+                itemWrapper.childNodes[1].classList.add("img-darken");
+                });
+                
+                itemWrapper.addEventListener('mouseout', () => {
+                    itemWrapper.childNodes[1].classList.remove('img-darken');
+                });
+                });
+    </script>
+</body>
+</html>

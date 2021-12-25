@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agric site</title>
+    <link rel="stylesheet" href="sab.css">
+</head>
+<body>
+    <header class="head">
+        <nav class="nav main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active-nav-link">Home</a></li>
+                <li><a href="about.html">Our Agents</a></li>
+                <li><a href="product.html">products</a></li>
+                <li>
+                    <a onclick="myFunction()">Login</a>
+                 </li>    
+            </ul>
+        </nav>
+          <h3 class="nav-name"><span class="head2">SHOP </span><span class="head2">IQ</span><span class="head2">AGRIC</span></h1>
+          <div class="container">
+                 <button onclick="location.href = 'product.html';" class="btn btn-play" type="button" class="btn-play">Learn More</button>
+         </div>
+    </header>
+    <main class="landing">
+        <h1 class="nav-name"><span class="head2">OUR </span><span class="head2">GALLERY</span></h1>
+       <div class="content-wrapper">
+           <div class="items-wrapper" id="wrapper-gallery">
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/me1.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                            <h3>Wheat Farm</h3>
+                         </div>
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/me2.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                             <h3>Cow Production</h3>
+                         </div>
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/me3.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                             <h1>Ploughing</h3>
+                         </div>
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/me4.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                            <h3> Water-Melon Produce</h3>
+                         </div>
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/me5.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                             <h3>Grazing Style</h3>
+                         </div>
+                     </div>
+               </div>
+               <div class="item-wrapper">
+                   <div class="img-background" style="background-image: url(images/me6.jpg);"></div>
+                     <div class="img-wrapper">
+                         <div class="sub">
+                             <h3>Fishing</h3>
+                         </div>
+                     </div>
+               </div>
+           </div>
+       </div>
+        
+    </main>       
+</body>
+<script>
+            function myFunction() {
+            alertFunc();
+            location.href = "login.html"
+
+        }
+            function alertFunc() {
+            alert("Login Now");
+            };
+
+            const portfolioItems = document.querySelectorAll(".item-wrapper");
+            portfolioItems.forEach((itemWrapper) => {
+            itemWrapper.addEventListener("mouseover", () => {
+            itemWrapper.childNodes[1].classList.add("img-darken");
+            });
+
+            itemWrapper.addEventListener('mouseout', () => {
+                itemWrapper.childNodes[1].classList.remove('img-darken');
+            });
+            });
+
+
+</script>
+</html>
